@@ -1,0 +1,153 @@
+doctype html
+html
+  head
+    title Concept Insights
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='css/style.css')
+  body
+    header._demo--heading
+      ._demo--container
+        a.wordmark(href='http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/')
+          span.wordmark--left IBM
+          span.wordmark--right Watson Developer Cloud
+        nav.heading-nav
+    ._demo--banner
+      ._demo--container
+        .banner--service-icon-container
+        .banner--service-info
+          h1.banner--service-title.base--h4
+            | Concept Insights using Fitness Data
+          .banner--service-description
+            | Concept Insights allows you to discover content which may or may not be found using a traditional keyword search.
+    ._demo--input
+      ._demo--container
+        h2.base--h2
+          | Try the service
+        p.base--p._content--description
+          | This service uses a pre-existing 
+          b graph
+          |  (a fancy database) of 
+          b concepts
+          |  (based on English Wikipedia) to 
+          b surface
+          |  (to link or match) the concepts in your input. It will use these concepts to recommend relevant content from the 
+          b corpus
+          |  we ingested (the documents we uploaded to Watson).
+          | 		  For this demo, we've uploaded a few documents related to Health and Fitness. The output comes from those documents, Wikipedia, and the concepts you input below.
+        ._content--input
+          h3#try-this-service.base--h3._content--input-title
+            | Input
+          span.icon-hyperlink
+            span.icon.icon-reset
+            button.base--a.reset-button(href='', type='reset')
+              | Reset
+          .input
+            .input--form
+              .input--tab-panels-container
+                .tab-panels(role='tabpanel')
+                  ul.tab-panels--tab-list(role='tablist')
+                    li.tab-panels--tab-list-item.base-li(role='presentation')
+                      a.tab-panels--tab.base--a.active(href='#concepts-panel', aria-controls='concepts', role='tab') Concepts
+                    li.tab-panels--tab-list-item.base-li(role='presentation')
+                      a.tab-panels--tab.base--a(href='#text-panel', aria-controls='text', role='tab') Body of Text
+                  .tab-panels--tab-content
+                    #concepts-panel.tab-panels--tab-pane.active(role='tab-panel')
+                      .concept--input-concept-list
+                        .concept
+                          .concept--new-concept-container.active
+                            span +
+                            span add concept
+                          .concept--input-container
+                            input.concept--input(type='text')
+                      span.icon-hyperlink
+                        span.icon.icon-code.icon-code-disabled
+                        button#label-search-view-code-btn.base--a.tab-panels--view-code(href='', onclick='show_label_search_response()', type='reset', disabled='')
+                          | View JSON
+                    #text-panel.tab-panels--tab-pane(role='tab-panel')
+                      a#sample-1.base--a.tab-panels--example-link Example 1
+                      a#sample-2.base--a.tab-panels--example-link Example 2
+                      #body-of-text.concept--abstract-concept-textarea.base--textarea(contenteditable='true')
+                      .concept--abstract-concept-container
+                        .concept--abstract-concept-title
+                          | Top 3 Abstracted Concepts:
+                        .concept--abstract-concept-list
+                        span.icon-hyperlink
+                          span.icon.icon-code.icon-code-disabled
+                          button#text-annotator-view-code-btn.base--a.tab-panels--view-code(href='', onclick='show_text_annotator_response()', type='reset', disabled='')
+                            | View JSON
+            #concepts-panel-API.input--API.input--json-container
+              pre.base--pre.API--json.language-javascript.
+                \n\t\t\t\t\t                
+                \t\t\t\t                
+            #text-panel-API.input--API.input--json-container
+              pre.base--pre.API--json.language-javascript.
+                \n\t\t\t\t\t                
+                \t\t\t\t                
+            #concepts-panel-endpoint.input--endpoint.active
+              | The service is using the
+              a.base--a(href='http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/apis/#!/concept-insights', target='new')
+                code label_search
+              |  API to help you choose concepts. For an in-depth explanation, visit the
+              a.base--a(href='http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/concept-insights/', target='new') Documentation
+              | .
+            #text-panel-endpoint.input--endpoint
+              | The service is using the
+              a.base--a(href='http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/apis/#!/concept-insights')
+                code annotate_text
+              |  API to help you abstract concepts. For an in-depth explanation, visit the
+              a.base--a(href='http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/concept-insights/', target='new') Documentation
+              | .
+        ._content--loading
+          img(src='images/loading-indicator.gif', width='100px', alt='')
+    ._demo--output(style='display: none;')
+      ._demo--container
+        ._content--output
+          h3.base--h3._content--output-title
+            | Output
+          p.base--p._content--output-des
+            | Our corpus may have explicit concept matches from your input. However, they also have implicit matches, with a single related concept or a collection of concepts. You may be surprised at what you would miss using a traditional keyword search.
+          ._content--concept-legend
+            .concept--your-input-legend
+            span.concept--your-input-label
+              | Your concepts
+            .concept--derived-concept-legend
+            span.concept--derived-concept-label
+              | Health and Fitness concepts
+          #TED-panel-list
+          p.base--p._content--output-des
+            | If nothing displays, it means there are no relevant concept matches between Wikipedia, our Health and Fitness docs, and the concepts you entered
+          .input--ted-endpoint
+            | The service is using the 
+            a.base--a(href='http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/apis/#!/concept-insights')
+              code conceptual search
+            |  API 
+            | 				to identify relevant content. For an in-depth explanation, visit the
+            a.base--a(href='http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/concept-insights/') Documentation
+            | .
+          span.icon-hyperlink.TED--view-code
+            span.icon.icon-code
+            button#conceptual-search-view-code-btn.base--a.tab-panels--view-code(href='', onclick='show_conceptual_search_response()', type='reset')
+              | View JSON
+          #TED-code-container.TED--code-container
+            h3.base--h3
+              | JSON
+            #TED-rest-api.TED--JSON
+              pre.base--pre.API--json.language-javascript.
+                \n\t\t\t\t\t\t                
+                \t\t\t\t\t                
+        span.icon-hyperlink
+          span.icon.icon-back2top
+          a.base--a(href='#try-this-service')
+            | Back to top
+        ._demo--hidden
+          .concept
+            .concept--typed-concept-container.active
+              span.concept--typed-concept.label
+              i.concept--close-icon.icon.icon-close
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(src='https://twitter.github.io/typeahead.js/releases/0.11.1/typeahead.bundle.js')
+    script(type='text/javascript', src='js/vendors/_prism.js')
+    script(type='text/javascript', src='js/citypeahead.js')
+    script(type='text/javascript', src='js/demo.js')

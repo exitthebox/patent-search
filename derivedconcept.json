@@ -1,0 +1,91 @@
+{
+  "explanation_tags": [
+    {
+      "concept": {
+        "id": "\/graphs\/wikipedia\/en-20120601\/concepts\/Machine_learning",
+        "label": "Machine learning"
+      },
+      "score": 0.99846625,
+      "parts_index": 0,
+      "text_index": [
+        119643,
+        119662
+      ],
+      "passage": "...the use of Kalman filters and particle filters. Parsing algorithms, also referred to as predictive tree-structure labels, may be used and may be supervised or unsupervised. One such technique involves..."
+    },
+    {
+      "concept": {
+        "id": "\/graphs\/wikipedia\/en-20120601\/concepts\/Cognition",
+        "label": "Cognition"
+      },
+      "score": 0.9977003,
+      "parts_index": 0,
+      "text_index": [
+        35078,
+        35087
+      ],
+      "passage": "...duration (when applicable, e.g., when the patient is awake), and\/or rate of change in one or more cognitive functions as measured, for example, using a reaction time (complex or simple) or any other..."
+    },
+    {
+      "concept": {
+        "id": "\/graphs\/wikipedia\/en-20120601\/concepts\/Unsupervised_learning",
+        "label": "Unsupervised learning"
+      },
+      "score": 0.99617004,
+      "parts_index": 0,
+      "text_index": [
+        116969,
+        116990
+      ],
+      "passage": "...intensity value, a seizure duration value and\/or a seizure spread value (or a seizure severity value) to obtain respective percentile values. The percentile values may then be averaged to determine a composite,..."
+    },
+    {
+      "concept": {
+        "id": "\/graphs\/wikipedia\/en-20120601\/concepts\/Supervised_learning",
+        "label": "Supervised learning"
+      },
+      "score": 0.9946422,
+      "parts_index": 0,
+      "text_index": [
+        116914,
+        116944
+      ],
+      "passage": "...the SSI value(s) may be determined by normalizing a seizure intensity value, a seizure duration value and\/or a seizure spread value (or a seizure severity value) to obtain respective percentile values. The percentile values may..."
+    },
+    {
+      "concept": {
+        "id": "\/graphs\/wikipedia\/en-20120601\/concepts\/Sequence_labeling",
+        "label": "Sequence labeling"
+      },
+      "score": 0.9938792,
+      "parts_index": 0,
+      "text_index": [
+        118921,
+        118938
+      ],
+      "passage": "...models (e.g., statistical distributions such a multivariate distributions normalized by expectation maximizing algorithms), density models (e.g., identifying dense regions in a phase space), and subspace models..."
+    },
+    {
+      "concept": {
+        "id": "\/graphs\/wikipedia\/en-20120601\/concepts\/Statistical_classification",
+        "label": "Statistical classification"
+      },
+      "score": 0.9900728,
+      "parts_index": 0,
+      "text_index": [
+        365,
+        379
+      ],
+      "passage": "...index; determining at least one seizure metric value for each seizure event; performing a first classification analysis of the plurality of seizure events from the at least one seizure metric value; detecting..."
+    }
+  ],
+  "id": "\/corpora\/nessroingrec6\/hff\/documents\/1457571172863606output",
+  "label": "US20160058359A1-20160303.XML",
+  "score": 0.9928051,
+  "user_fields": {
+    "org": "Flint Hills Scientific, L.L.C.",
+    "patent": "20160058359"
+  },
+  "last_modified": "2016-04-27T05:37:30.59Z"
+}
+
